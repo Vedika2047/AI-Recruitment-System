@@ -1,0 +1,4 @@
+id,name,email,phone,skills,education,experience,ats_score,status,created_at
+1,Vedika,vedika@gmail.com,9876543210,"Python,SQL",BE Computer,Fresher,0,Pending,06-06-2026 22:05
+2,VEDIKA SATASIYA,vedika2@gmail.com,9999999999,"Python,SQL,React,MySQL,Git",,,0,Pending,08-06-2026 20:44
+3,VEDIKA SATASIYA,vedika3@gmail.com,8888888888,"Python,SQL,React,MySQL,Git,Pandas",,,0,Pending,10-06-2026 18:16

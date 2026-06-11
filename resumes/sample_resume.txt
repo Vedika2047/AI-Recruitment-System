@@ -1,0 +1,12 @@
+VEDIKA SATASIYA
+
+Email: vedika@gmail.com
+
+Phone: 9876543210
+
+Skills:
+Python
+MySQL
+Pandas
+Git
+React

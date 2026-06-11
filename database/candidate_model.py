@@ -124,4 +124,31 @@ def delete_candidate(candidate_id):
     cursor.close()
     conn.close()
 
+from database.db import get_connection
 
+
+def update_ats_score(
+    candidate_id,
+    score
+):
+
+    conn = get_connection()
+
+    cursor = conn.cursor()
+
+    cursor.execute(
+        """
+        UPDATE candidates
+        SET ats_score=%s
+        WHERE id=%s
+        """,
+        (
+            score,
+            candidate_id
+        )
+    )
+
+    conn.commit()
+
+    cursor.close()
+    conn.close()
