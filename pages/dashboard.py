@@ -1,5 +1,5 @@
 import streamlit as st
-
+from components.score_card import score_card
 
 def show():
 
@@ -11,34 +11,21 @@ def show():
     # KPI Cards
     col1, col2, col3, col4 = st.columns(4)
 
+
+
     with col1:
-        st.metric(
-            label="Total Applications",
-            value="125",
-            delta="+12"
-        )
+        score_card("Applications", "125", "📄", "#3B82F6")
 
     with col2:
-        st.metric(
-            label="Shortlisted",
-            value="42",
-            delta="+5"
-        )
+        score_card("Shortlisted", "42", "✅", "#10B981")
 
     with col3:
-        st.metric(
-            label="Interviews Scheduled",
-            value="18",
-            delta="+3"
-        )
+        score_card("Interviews", "18", "🎤", "#F59E0B")
 
     with col4:
-        st.metric(
-            label="Selected Candidates",
-            value="8",
-            delta="+2"
-        )
-
+        score_card("Selected", "8", "🏆", "#8B5CF6")
+    
+     
     st.divider()
 
     # Candidate Pipeline
