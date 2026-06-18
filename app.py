@@ -43,8 +43,14 @@ def load_global_css():
 
 
 def show_page_title(title, subtitle):
-    st.markdown(f'<div class="page-heading">{title}</div>', unsafe_allow_html=True)
-    st.markdown(f'<div class="page-subheading">{subtitle}</div>', unsafe_allow_html=True)
+    st.markdown(
+        f'<div class="page-heading">{title}</div>',
+        unsafe_allow_html=True
+    )
+    st.markdown(
+        f'<div class="page-subheading">{subtitle}</div>',
+        unsafe_allow_html=True
+    )
 
 
 def main():
@@ -74,14 +80,18 @@ def main():
             analytics.show()
 
         else:
-            show_page_title("AI Recruitment System", "Welcome to the smart hiring dashboard.")
+            show_page_title(
+                "AI Recruitment System",
+                "Welcome to the smart hiring dashboard."
+            )
 
     except ModuleNotFoundError as e:
         st.error("Some page/component file is missing.")
         st.code(str(e))
 
-    except AttributeError:
-        st.error("Every page file must contain a show() function.")
+    except AttributeError as e:
+        st.error("One page file does not contain show() function.")
+        st.code(str(e))
 
     except Exception as e:
         st.error("Something went wrong while loading the page.")
