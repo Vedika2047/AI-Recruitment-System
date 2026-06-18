@@ -63,8 +63,6 @@ def navbar():
 
         st.markdown("---")
 
-        st.info("Member 3: Frontend Engineer")
-
         st.markdown(
             """
             <div class="nav-footer">
